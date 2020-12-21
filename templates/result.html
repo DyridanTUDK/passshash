@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Hasher</title>
+    <link rel="stylesheet" href="../static/main1.css">
+</head>
+<body>
+    <div class="app-wrap">
+        <header>
+            <form action="search_up" method="POST">
+                <input type="text" name="password" autocomplete="off" class="search-box" placeholder="Enter your password">
+                <br>
+                <button id="hello">Hash and Search</button>
+            </form>
+        </header>
+        <main>
+            <section class="location">
+                <div class="hashmap">
+                    <!-- <div class="date">The code will execute, when pressed the search</div> -->
+                    <div class="date">This is an Hashed value of your password and matches</div>
+                    <div class="date">This is a security measure</div>
+                    <div class="city">
+                        <ul>
+                            {% for i in hashs %}
+                               <li> {{ i }} </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="current">
+                    <div class="weather"></div>
+                    <div class="hi-low"></div>
+                    <div class="temp">{{hashpass}}</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <script src></script>
+</body>
+</html>
